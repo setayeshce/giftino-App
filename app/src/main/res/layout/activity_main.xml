@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+
+    <ImageView
+        android:id="@+id/image_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/login_img" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="196dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="60dp"
+        android:background="#8B0B0A0A"
+        android:text="ورود"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ch_RememberMe"
+        tools:ignore="MissingConstraints,UnknownId" />
+
+    <TextView
+        android:id="@+id/txt_login_account"
+        android:layout_width="180dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="148dp"
+        android:text="ورود"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_login" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/login_name"
+        android:layout_width="205dp"
+        android:layout_height="51dp"
+        android:layout_margin="30dp"
+        android:layout_marginTop="20dp"
+        android:hint="نام یا تلفن همراه"
+        android:textAlignment="textStart"
+        android:textColorHint="#F3494545"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_login_account"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_phone"
+        android:layout_width="203dp"
+        android:layout_height="68dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:color/transparent"
+        android:hint="شماره تلفن همراه"
+        android:paddingTop="8dp"
+        android:textColorHint="#050505"
+        android:visibility="visible"
+        app:hintTextColor="#BA222020"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_name"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="203dp"
+            android:layout_height="68dp"
+            android:background="@android:color/transparent"
+            android:inputType="textPassword"
+            android:textColor="#090909"
+            android:textColorHint="#BA494545" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/ch_RememberMe"
+        android:layout_width="119dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="44dp"
+        android:text="مرا به خاطر بسپار"
+        android:textAlignment="textEnd"
+        android:textColor="#BA292424"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_phone"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
